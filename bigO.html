@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Big O Notation</title>
+    <script src="https://www.desmos.com/api/v1.1/calculator.js"></script> 
+    <link href="https://fonts.googleapis.com/css2?family=Yuji+Syuku&display=swap" rel="stylesheet"> 
+</head>
+<body>
+    <h1><u>Big O Notation</u></h1>
+    <h2><u>Introduction</u></h2>
+        <p>Big O notation is a mathemetical notation that describes the <strong>upper bound of growth</strong> 
+            for a specific function. If we say that a function <em>f(x)</em> is O(<em>g(x)</em>) (spoken as "f(x) is O of g(x)"), 
+            that simply means that the function <em>f(x)</em> grows slower or at an equal rate as <em>g(x)</em>, 
+            for <strong>sufficiently large values of x.</strong> (In other words, as x approaches infinity). This encompasses both linear and nonlinear growth rates.
+        </p>
+    <h3>Why?</h3>
+        <p>Since Big O is used as a measure of time or space efficiency, it is important to consider large input sizes. Differences between outputs
+            will be less pronounced with small input sizes, but as input scales, so will the differences. For example, 2x and x only have a difference of 1 at x=1, but have 
+            a difference of 100 at x=100. 
+            <br><img src="images/outputDifferences.png" alt="differences in output can increase when input changes." width="700">
+            <br>To save time and space, we want to pick functions that will have relatively less growth as x approaches infinity.
+            Additionally, non-linear functions (as shown above) will have non-constant rate of change, which is means their derivatives vary with input size, x. 
+            <br><img src="images/nonlinear.png" alt="nonlinear functions" width="700">
+            
+            <br><br>
+            Big O also generally focuses on comparing the dominant terms of functions rather than entire functions. (The term with the largest power or degree is called
+            the dominant term.) In a polynomial equations such as 3x<sup>5</sup>+x<sup>2</sup>+4x, for example, the highest power term (in this case 3x<sup>5</sup>) will eventually dominate the behavior of the function, since at large
+            values of x, the growth of 3x<sup>5</sup> will be so large that it will make the growth of smaller powered terms relatively negligible. 
+            <br><br>
+            For these reasons, Big O focuses on comparing the growth behavior of <strong>the dominant term</strong> of functions <strong>as x approaches infinity.</strong></p>
+    <h2><u>Formal Definition</u></h2>
+        <p>The definition of Big O states that: 
+            <span class="highlight">
+                <br><br>A function <em>f(x)</em> is O(<em>g(x)</em>) </strong>if and only if 
+                <h4>
+                    There exists some constants C and n for which <strong>f(x) &le; C * g(x), </strong>
+                </h4>
+                Whenever <em>x</em> &ge; n, and C is a constant.
+            </span>
+            <br><br>
+        Restated: f(x) is less than or equal to g(x) times a constant for all values of x. This guarantees that f(x) is never able to 
+        exceed the <u>scaled version of g(x), past a certain value of x.</u> 
+        <br> Note that although big O focuses on dominant term behavior, we consider the entire expression when using the formal definition, for accuracy.
+        <h3>What does the constant n do?</h3>
+        <p>Consider the following graph, where the black line is f(x) and the blue line is g(x). It is clear that the growth rate of the g(x) quickly
+            exceeds f(x), but for a short period in the beginning of the graph, f(x) has greater values than g(x). 
+        </p>
+        <iframe src="https://www.desmos.com/calculator/ziafzpiwfv?embed" width="500"></iframe>
+        <p>Recall that big O notation is concerned with the behavior of functions as input size increases. By choosing a constant n, we are essentially
+            setting it as our start point for comparison, and not considering behavior before that point. 
+        </p>
+        <h3>Why compare f(x) to g(x) scaled by a constant C, rather than g(x) itself?</h3>
+        <p>Consider the following, where the red function is f(x) and black is g(x). The two functions shown above both have a slope of 0 for all values of x, so they grow at equal rates as x approaches infinity.
+            This means that they should be big O of each other (This is also called big Theta. More on that later.)</p>
+        <div>
+        <iframe src="https://www.desmos.com/calculator/lgivoclyzk?embed" width="500" frameborder=0></iframe>
+        <p> It can be said that g(x) &le; f(x) for all x, but the inverse cannot be said. However, if we incorportate a constant C that
+            scales f(x), then g(x) &le; C * f(x), and it is shown that the functions are O of each other.</p>
+        <strong>In summary, the constant n determines the point at which we begin comparing the two functions, and the constant C ensures that we are purely comparing growth rates
+            rather than actual output values.
+        </strong>
+<h2><u>Exercise</u></h2>
+
+</body>
+</html>

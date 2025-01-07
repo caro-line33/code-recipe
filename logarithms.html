@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Logarithms</h1>
+    <p>Logarithms are the inverse of exponentiation, and represent the power to which a <strong>base</strong> must be raised to produce a given number, called the <strong>argument</strong>. Here is a logarithm calculator.</p>
+    <div class="exampleSection">
+        <h2>Log<sub><input type="number" min=0 placeholder="base" class ="base" id="base"></sub>(<input type="number" min="0" placeholder="argument" id="argument">) = <input type="number" placeholder="answer" readonly id="answer"></h2>
+        <p id="since"></p>
+    </div>
+    <p>Here us a demonstration of how logarithms can be represented as <strong>repeated multiplication of the base until we obtain the argument.</strong> Click multiply to multiply the base until you get the argument.</p>
+
+    <div class="exampleSection">
+        <h2>Log<sub><input type="number" min=0 placeholder="base" class ="base" id="multBase"></sub>(<input type="number" min="0" placeholder="argument" id="multArgument">) = <input type="number" placeholder="answer" readonly id="multAnswer"></h2>
+        <input type="number" placeholder="base" id="baseFactor" readonly><button id="multiplyButton">multiply</button> <button id="multReset">reset</button>
+    </div>
+    <p>Here us a demonstration of how logarithms can be represented as <strong>repeated division of the argument by the base until we obtain the number 1.</strong> Click divide to divide the argument until you get the number 1.</p>
+    <div class="exampleSection">
+        <h2>Log<sub><input type="number" min=0 placeholder="base" class ="base" id="divBase"></sub>(<input type="number" min="0" placeholder="argument" id="divArgument">) = <input type="number" placeholder="answer" readonly id="divAnswer"></h2>
+        <input type="number" placeholder="argument" id="argDivisor" readonly> <button id="divideButton">divide</button><button id="divReset">reset</button>
+    </div>
+
+    <p>Note that in computer science we are usually dealing with base 2, since many algorithms will split sets in half repeatedly. The base won't always be explicitly specified, so assume it is 2. This is called a binary logarithm.</p>
+
+    <script src="logarithms.js"></script>
+</body>
+</html>
+
