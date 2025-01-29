@@ -1,0 +1,45 @@
+body{
+    font-family: Inter, Arial, Helvetica, sans-serif;
+    background-color: #F0F0F0;
+}
+.header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border: 1px;
+    border-bottom: 1px solid black;
+    position: fixed;
+    right: 5vw;
+    left: 5vw;
+}
+h1{
+    margin: 0;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+.title{
+    display: flex;
+    flex: 1;
+}
+.links{
+    display: flex;
+    justify-content: space-between;
+}
+.link{
+    margin-left: 5vw;
+}
+#main-section{
+    padding-top: 40px;
+    display: flex;
+    justify-content: space-between;
+    padding: 50px;
+}
+a:hover{
+    background-color: lightgreen;
+    transition: background-color 0.15s;
+}
+.subject-title{
+    text-decoration: underline;
+}
