@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Bubble Sort Visualization</title>
+  <style>
+    #container span {
+      display: inline-block;
+      margin: 4px;
+      padding: 4px;
+      background-color: paleturquoise;
+    }
+    #container span.done {
+    background-color: palegreen !important;
+    } 
+  </style>
+</head>
+<body>
+  <select name="SortingOptions" id="SortingOptions">
+      <option value="BubbleSort">Bubble Sort</option>
+      <option value="SelectionSort">Selection Sort</option>
+      <option value="InsertionSort">Insertion Sort</option>
+  </select>
+  <div id="container"></div>
+  <button id="SortButton">Sort</button>
+  <label for="speedbar">speed:</label>
+  <input type="range" id="speedbar" min="1" max="10" value = '1'>
+  <button id="reset">Generate New Array</button>
+<script src="test.js"></script>
+
+</body>
+</html>
